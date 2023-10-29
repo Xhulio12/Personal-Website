@@ -1,6 +1,6 @@
 :root {
     --blue: #4f7cdc;
-    --violet: #925ac5;
+    --violet: #4f2e6e;
     --normal-font: 'Share Tech', sans-serif;
     --header-font: 'Oswald', sans-serif;
 }
@@ -15,7 +15,7 @@
 }  
   
 ::-webkit-scrollbar-track {
-    background-color: var(--bs-dark);
+    background-color: #030c1c;
 }
    
 ::-webkit-scrollbar-thumb {
@@ -97,6 +97,7 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     margin-top: 100px;
     position: relative;
 }
+
 
 .video-container h1, .port-head, .contact-head{
     font-size: clamp(calc(1.325rem + .9vw), calc(1.7rem + .9vw), calc(1.9rem + .9vw));
@@ -197,7 +198,7 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     width: 200%;
     height: 200%;
     border-radius: 35%;
-    background-color: var(--blue);
+    background-color: var(--violet);
     transition: .5s;
     z-index: -1;
 }
@@ -320,6 +321,7 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     list-style: none;
     padding: 0;
     background-color: transparent;
+    transform: translateY(-50%);
 }
 
 .floating-social a {
@@ -332,7 +334,7 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
 }
 
 .floating-social li:hover a{
-    transform: translateX(calc(-15px - .4rem));
+    transform: translateX(calc(-10px - .4rem));
 }
 
 .floating-social li i {
@@ -465,12 +467,13 @@ footer iframe {
 .bubbles {
     position: relative;
     display: flex;
+    justify-content: center;
 }
 
 .bubbles span {
     position: relative;
-    width: 30px;
-    height: 30px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     margin: 0 4px;
     background-color: var(--blue);
@@ -498,8 +501,6 @@ footer iframe {
     }
 }
 
-/*Contact Styles*/
-
 .contact img {
     height: 50px;
     width: 50px;
@@ -525,6 +526,108 @@ footer iframe {
 .contact section a:hover {
     border-color: var(--bs-light);
     color: var(--bs-light);
+}
+
+/* Might Add Cubes Back Later
+.cube {
+    position: relative;
+    left: 10%;
+    width: 150px;
+    height: 150px;
+    transform-style: preserve-3d;
+    animation:  rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    
+    100% {
+        transform: rotateX(-30deg) rotateY(360deg);
+    }
+}
+
+.cube div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.cube div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--bs-black), var(--blue));
+    transform: rotateY(calc(90deg * var(--pos))) translateZ(75px);
+}
+
+.cube .cube-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: var(--bs-black);
+    transform: rotateX(90deg) translateZ(75px);
+}
+
+.cube .cube-top::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150px;
+    height: 150px;
+    background: var(--blue);
+    transform: translateZ(-190px);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(25, 53, 82, 0.2),
+    0 0 200px rgba(25, 53, 82, .4),
+    0 0 300px rgba(25, 53, 82, .6),
+    0 0 400px rgba(25, 53, 82, .8),
+    0 0 500px rgba(25, 53, 82, 1);
+}
+
+.cube.second-cube {
+    top: -150px;
+    left: 80%;
+    animation:  rotate 4s linear infinite;
+}
+
+.cube.second-cube div span {
+    background: linear-gradient(var(--bs-black), var(--violet));
+}
+
+@keyframes rotateLeft {
+    0% {
+        transform: rotateX(-30deg) rotateY(0deg);
+    }
+    
+    100% {
+        transform: rotateX(-30deg) rotateY(-360deg);
+    }
+}
+
+.cube.second-cube .cube-top::before {
+    background: var(--violet);
+    filter: blur(20px);
+    box-shadow: 0 0 120px rgba(68, 25, 82, 0.2),
+    0 0 200px rgba(68, 25, 82, .4),
+    0 0 300px rgba(68, 25, 82, .6),
+    0 0 400px rgba(68, 25, 82, .8),
+    0 0 500px rgba(68, 25, 82, 1);
+}*/
+
+
+.contact-map {
+    width: 100%;
+    height: 50vh;
 }
 
 @media only screen and (min-width: 768px) {
@@ -610,6 +713,11 @@ footer iframe {
 
     /*Contact Styles*/
 
+    .bubbles span {
+        width: 15px;
+        height: 15px;
+    }
+
     .contact section {
         width: 33%;
     }
@@ -619,5 +727,12 @@ footer iframe {
 @media only screen and (min-width: 992px) {
     .video-container h1 {
         font-size: 4rem;
+    }
+    
+    /*Contact Styles*/
+
+    .bubbles span {
+        width: 30px;
+        height: 30px;
     }
 }
