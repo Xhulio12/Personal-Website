@@ -31,7 +31,7 @@ const handleOnMove = e => {
   }
 }
 
-/* -- Had to add extra lines for touch events -- */
+//Handling touch events
 
 trackScroller.onmousedown = e => handleOnDown(e);
 
