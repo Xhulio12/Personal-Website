@@ -1,33 +1,32 @@
 const letters = "abcdefghijklmnopqrstuvwxyz";
-const h1 = document.querySelector("h1");
 
-// Convert encoded <br> tags in data-value to actual line breaks
-const dataValue = h1.dataset.value.replace(/&#60;br&#62;/g, '<br>');
+var h1 = document.querySelector("h1");
+
 let interval = null;
 
 function type() {
     let iteration = 0;
-
+    
     clearInterval(interval);
-
+    
     interval = setInterval(() => {
-        h1.innerHTML = dataValue
-            .split("")
-            .map((char, index) => {
-                if (index < iteration || char === "<" || char === "b" || char === "r" || char === ">") {
-                    return dataValue[index];
-                }
-
-                return letters[Math.floor(Math.random() * 26)];
-            })
-            .join("");
-
-        if (iteration >= dataValue.length) { 
-            clearInterval(interval);
-        }
-
-        iteration += 1 / 3;
-    }, 15);
+      h1.innerText = h1.innerText
+        .split("")
+        .map((letter, index) => {
+          if(index < iteration) {
+            return h1.dataset.value[index];
+          }
+        
+          return letters[Math.floor(Math.random() * 26)]
+        })
+        .join("");
+      
+      if(iteration >= h1.dataset.value.length){ 
+        clearInterval(interval);
+      }
+      
+      iteration += 1 / 3;
+    },15);
 }
 
 if (h1) {
