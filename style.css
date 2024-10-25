@@ -108,6 +108,10 @@ header .navbar .navbar-nav li .nav-link:is(:hover, :focus-visible)::after {
     width: 100%;
 }
 
+.video-container h1 {
+    top: 45%;
+}
+
 .video-container .link-btn  {
     position: absolute;
     top: 65%;
