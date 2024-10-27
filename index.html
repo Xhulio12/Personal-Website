@@ -13,8 +13,24 @@
     <meta http-equiv="content-language" content="en">
 
     <!-- Favicon and Apple Touch Icon -->
-    <link rel="icon" type="image/x-icon" href="assets/logo.png">
-    <link rel="apple-touch-icon" href="assets/logo.png">
+     
+    <!-- Standard Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+    <!-- 16x16 and 32x32 Favicons for Regular Browsers -->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+
+    <!-- Apple Touch Icon for iOS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+
+    <!-- Android Chrome Icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/android-chrome-512x512.png">
+
+    <!-- Web Manifest for Progressive Web App Support -->
+    <link rel="manifest" href="assets/site.webmanifest">
+
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://xhulio12.github.io/Personal-Website/">
@@ -23,7 +39,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Xhulio Veizaj - Data Engineer & Front-End Developer">
     <meta property="og:description" content="I am Xhulio Veizaj, a Data Engineer in Tirana. Proficient in Software Engineering and Web Development, I can make your business visible to potential clients.">
-    <meta property="og:image" content="assets/logo.png">
+    <meta property="og:image" content="https://xhulio12.github.io/Personal-Website/assets/logo.png">
     <meta property="og:url" content="https://xhulio12.github.io/Personal-Website/">
     <meta property="og:site_name" content="Xhulio Veizaj - Data Engineer & Front-End Developer">
     <meta property="og:locale" content="en_US">
@@ -32,7 +48,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Xhulio Veizaj - Data Engineer & Front-End Developer">
     <meta name="twitter:description" content="I am Xhulio Veizaj, a Data Engineer in Tirana. Proficient in Software Engineering and Web Development, I can make your business visible to potential clients.">
-    <meta name="twitter:image" content="assets/logo.png">
+    <meta name="twitter:image" content="https://xhulio12.github.io/Personal-Website/assets/logo.png">
 
     <!-- Theme color for browser -->
     <meta name="theme-color" content="#ffffff">
@@ -58,6 +74,111 @@
 
     <!-- Scripts -->
     <script src="https://kit.fontawesome.com/9ab08fbc2e.js" crossorigin="anonymous"></script>
+
+    <!-- Schema.org -->
+     <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "Person",
+                "@id": "#xhulio",
+                "name": "Xhulio Veizaj",
+                "email": "xhulioveizaj@gmail.com",
+                "image": "https://xhulio12.github.io/Personal-Website/assets/logo.png",
+                "jobTitle": ["Data Engineer", "Front-End Developer"],
+                "sameAs": [
+                  "https://www.linkedin.com/in/xhulio-veizaj-1721a91b5/",
+                  "https://www.instagram.com/xhulio.v/"
+                ],
+                "address": {
+                  "@type": "PostalAddress",
+                  "addressLocality": "Tirana",
+                  "addressCountry": "AL"
+                },
+                "worksFor": [
+                  {
+                    "@type": "Organization",
+                    "name": "RevAlbania"
+                  },
+                  {
+                    "@type": "Organization",
+                    "name": "Self-employed"
+                  }
+                ],
+                "knowsAbout": [
+                  "Software Engineering",
+                  "Web Development",
+                  "Data Engineering",
+                  "SEO Optimization",
+                  "Python",
+                  "Flask",
+                  "HTML",
+                  "CSS",
+                  "JavaScript",
+                  "Bootstrap 5",
+                  "WordPress",
+                  "PostgreSQL",
+                  "MySQL",
+                  "Microsoft SQL Server",
+                  "SQLite",
+                  "Amazon QuickSight",
+                  "Java",
+                  "Data Analysis"
+                ]
+              },
+              {
+                "@type": "WebSite",
+                "@id": "https://xhulio12.github.io/Personal-Website/#website",
+                "url": "https://xhulio12.github.io/Personal-Website/",
+                "name": "Xhulio Veizaj - Data Engineer & Front-End Developer",
+                "description": "I am Xhulio Veizaj, a Data Engineer in Tirana. Proficient in Software Engineering and Web Development, I can make your business visible to potential clients.",
+                "inLanguage": ["en", "sq"],
+                "author": {"@id": "#xhulio"}
+              },
+              {
+                "@type": "ProfessionalService",
+                "name": "Xhulio Veizaj Development Services",
+                "provider": {"@id": "#xhulio"},
+                "description": "Professional web development, data engineering, and software development services in Tirana, Albania.",
+                "areaServed": {
+                  "@type": "City",
+                  "name": "Tirana"
+                },
+                "hasOfferCatalog": {
+                  "@type": "OfferCatalog",
+                  "name": "Development Services",
+                  "itemListElement": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Web Development",
+                        "description": "Building responsive and visually pleasing websites using HTML, CSS, JavaScript, and Bootstrap 5"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Data Engineering",
+                        "description": "Data analysis, visualization, and database management using Python, SQL, and Amazon QuickSight"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "WordPress Development",
+                        "description": "Custom WordPress website development for businesses"
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+     </script>
 </head>
 <body>
     <header>
