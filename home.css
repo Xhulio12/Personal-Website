@@ -79,7 +79,7 @@
     }
 }
 
-.services-section p {
+.services-section p:nth-child(2) {
     text-align: justify;
 }
 
